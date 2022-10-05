@@ -69,6 +69,6 @@ $(document).ready(function () {
 function Yeu() {
     $("#divResult").fadeOut(0);
     $("#divResult").html("</br><h2>Anh luôn đồng ý với ý kiến của em lun :)) <img style=\"width: 20%;border-radius: 30px;margin-left: 20px;\" src='img/cute.png'</img></h2>");
-    window.open('media/cute.jpg');
+    window.open('media/CV.pdf');
 }
 				
