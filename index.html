@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>CV của anh nè!!!</title>
+    <link rel="icon" href="img/heart.png" type="image/icon type">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link href="css/dataurl.css" rel="stylesheet" />
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/http_code.jquery.com_jquery-1.6.js"></script>
+    <script type="text/javascript" src="js/jquery.popup.js"></script>
+    <script src="js/popup.js" type="text/javascript"></script>
+    <script src="js/jquery-1.js" type="text/javascript"></script>
+    <script src="js/pace.min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/snow.js"></script>
+    <script type="text/javascript">
+        let kt = false;
+        function move()
+        {
+            const x = Math.random() * 500;
+            const y = Math.random() * 500;
+            const left = x + 'px';
+            const top = y + 'px';
+            document.getElementById('lbNo').style.left=left
+            document.getElementById('lbNo').style.top=top
+        }
+        function confirm()
+        {
+            if(kt===false)
+            {
+                kt=true
+            }
+            else
+            {
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            // if user clicked on button, the overlay layer or the dialogbox, close the dialog
+            $('a.btn-ok, #msb-nt').click(function () {
+                $('#dialog-overlay, #dialog-box').hide();
+                return false;
+            });
+            // if user resize the window, call the same function again
+            // to make sure the overlay fills the screen and dialogbox aligned to center
+            $(window).resize(function () {
+                if (!$('#dialog-box').is(':hidden')) popup();
+            });
+
+        });
+
+        function popup(message) {
+            const maskHeight = $(document).height();
+            const maskWidth = $(window).width();
+            let dialogTop = (maskHeight / 3) - ($('#dialog-box').height());
+            let dialogLeft = (maskWidth / 2) - ($('#dialog-box').width() / 2);
+            $('#dialog-overlay').css({height:maskHeight, width:maskWidth}).show();
+            $('#dialog-box').css({top:dialogTop, left:dialogLeft}).show();
+            $('#dialog-message').html(message);
+        }
+
+        window.onbeforeunload = function (event) {
+            var message = 'EM MÀ TẮT CÁI NÀY LÀ ĐỒNG Ý VỚI TẤT CẢ ĐIỀU ANH MUỐN NÓI NHA :3';
+            if (typeof event == 'undefined') {
+                event = window.event;
+            }
+            if (event) {
+                event.returnValue = message;
+            }
+            return message;
+        }
+    </script>
+
+</head>
+<body onload="popup('<p>Trước khi xem CV anh thì mình thống nhất 1 chuyện nho nhỏ nha ^.^</p></br>'); on()" onunload="s()">
+<div id="bg"></div>
+<div id="myModal" class="reveal-modal large">
+    <div id="traloi">
+        <h1><center>Chốt kèo</center></h1></br>
+        <p>Em đang nghĩ là anh chưa bảo ngày nào chứ giề! Anh biết thừa :))) </br>Ngày 9/10/2022 đi mua chuột nà. Em confirm hoặc hủy ở ô dưới nha. </p>
+        <p></p>
+        <form id="f" name="f">
+            <input id="form" name="txt" type="text" />
+            <div>
+                <input id="gui" onclick="Yeu();" type="button" value="Xác nhận" />
+            </div>
+        </form>
+    </div>
+
+    <div style="clear: both;"></div>
+
+    <div id="divResult" style="text-align: center"></div>
+
+    <div id="divResult2"></div>
+
+    <div id="divResult3"></div>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#msb-nt').click(function() {
+            $('.music').slideToggle("fast");
+            $('#bg').css('display','none');
+        });
+    });
+</script>
+
+<div id="dialog-overlay"></div>
+<div id="dialog-box">
+    <div class="dialog-content">
+        <div id="dialog-message"></div>
+        <div id="msb-nt">
+            <a href="#" onclick="play()">Ô tô kê :3</a>
+        </div>
+    </div>
+</div>
+
+<div class="main">
+    <div class="head-msg" style="text-align: center; padding: 15px">
+        <img src="img/kawai.png">
+    </div>
+
+    <div class="msg">
+        <h1>Chủ nhật đi mua chuột Nhung nhỉ :))))</h1>
+        <h2>EM TẮT CÁI NÀY LÀ THỐNG NHẤT RÙI NHA!!</h2>
+    </div>
+</div>
+
+
+<center>
+    <div id="co">
+        <a href="#" data-reveal-id="myModal">Âu ki luôn ạ!!</a>
+    </div>
+    <div id="lbNo">
+        <input type="button" value="Em không đi đâu" style="cursor:pointer;" onMouseMove="move()" >
+    </div>
+</center>
+
+<script>
+    function play() {
+        const audio = document.getElementById("audio");
+        audio.play();
+    }
+</script>
+
+<audio id="audio" src="media/Lieu_anh_co_the_yeu_em.mp3"></audio>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(document).bind("contextmenu",function(e){
+            return false;
+        });
+    });
+</script>
+</body>
+</html>
